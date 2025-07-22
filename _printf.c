@@ -138,7 +138,7 @@ int print_int (va_list args)
 	while (i > 0)
 	{
 		i--;
-		write(1, &buffer[i], 1);
+		count += write(1, &buffer[i], 1);
 	}
 
 	return (count);
