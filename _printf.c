@@ -17,10 +17,10 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-
 	if (format == NULL)
 		return (-1);
-
+	if (format[i] == '%' && format[i + 1] == '\0')
+		return (-1);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1])
@@ -106,7 +106,6 @@ int print_percent(void)
 
 int print_int (va_list args)
 {
-	/*unsigned int num;*/
 	int count = 0;
 	long int n = va_arg(args, int);
 	char buffer[12];
