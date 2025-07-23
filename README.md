@@ -23,21 +23,16 @@ A copy of the printf function in C
 | `main.h`     | Header file with function prototypes |
 | `README.md`  | Project documentation                 |
 |`man_3_printf`| Custom man page for '_printf' command|
-## 🔧 Functions
+## 🔧 Functions & Format Specifiers
 | Function         | Description           | Handles format specifier |
 |------------------|-----------------------|---------------------------|
 | `print_char`     | Prints a character    | `%c`                      |
 | `print_str`      | Prints a string       | `%s`                      |
 | `print_percent`  | Prints the `%` symbol | `%%`                      |
 | `print_int`      | Prints an integer     | `%d`, `%i`                |
-## 🧠 Supported Format Specifiers
-| Specifier | Description                      |
-|-----------|----------------------------------|
-| `%c`      | Prints a single character        |
-| `%s`      | Prints a string                  |
-| `%%`      | Prints a literal percent sign    |
-| `%d`      | Prints a decimal (base 10) number |
-| `%i`      | Prints an integer (base 10)      |
+
+## ⚛ Technology Stack
+[![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)](#)  [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)  [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](#) [![Vim](https://img.shields.io/badge/Vim-%2311AB00.svg?logo=vim&logoColor=white)](#) [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
 
 ## 🤝 Team
 
