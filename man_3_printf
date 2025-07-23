@@ -1,0 +1,42 @@
+.TH _PRINTF 3 "July 23, 2025" "Version 1.0" "_printf manual page"
+.SH NAME
+_printf \- recreating printf in C
+.SH SYNOPSIS
+.B _printf
+.RI "(const char *format, ...)"
+.SH DESCRIPTION
+.B _printf
+is a re-implementation of the standard C
+.BR printf(3)
+function. The _printf function prints formatted output to standard output (stdout)
+.SH FORMAT SPECIFIERS
+.TP
+.B %c
+Prints a single character.
+.TP
+.B %s
+Prints a string.
+.TP
+.B %d, %i
+Prints a signed decimal integer.
+.TP
+.B %%
+Prints a literal percent sign.
+.SH RETURN VALUE
+Returns the number of characters printed (excluding the null terminator).
+In case of error (e.g., a NULL), the function returns -1. 
+.SS Limitations
+This implementation does not handle:
+. in +4
+\- Flag characters ('+', ' ', '#', '0')
+. in -4
+. in +4
+\- Precision and field width
+. in -4
+.SH EXAMPLES
+.nf
+_printf("Hello %s !\\n", "Malik");  /* → 12 */
+_printf("Total : %d%%\\n", 42);     /* → 13 */
+.fi
+.SH AUTHORS
+Malik Bouanani, Haitu Nguyen
