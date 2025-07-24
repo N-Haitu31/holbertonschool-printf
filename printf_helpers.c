@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_char - Imprime un caractère
- * @args: Liste d'arguments
- * Return: Nombre de caractères imprimés (toujours 1)
+ * print_char - Prints a single character
+ * @args: Variadic arguments with character to print
+ * Return: The number of characters printed (always 1)
  */
 int print_char(va_list args)
 {
@@ -11,9 +11,9 @@ int print_char(va_list args)
 	return (write(1, &c, 1));
 }
 /**
- * print_str - Imprime une chaîne de caractères
- * @args: Liste d'arguments
- * Return: Nombre de caractères imprimés
+ * print_str - Prints a character string
+ * @args: Variadic argument list containing a pointer to the string to print
+ * Return: Number of characters printed, handling NULL as (null)
  */
 int print_str(va_list args)
 {
@@ -27,9 +27,9 @@ int print_str(va_list args)
 	return (write(1, str, len));
 }
 /**
- * print_percent - Imprime un pourcentage littéral (%)
- * @args: Liste d'arguments (ignoré)
- * Return: Nombre de caractères imprimés (toujours 1)
+ * print_percent - Prints a literal percentage character ('%')
+ * @args: Variadic argument list (unused)
+ * Return: The number of characters printed (always 1)
  */
 int print_percent(va_list args)
 {
@@ -38,9 +38,9 @@ int print_percent(va_list args)
 	return (write(1, &c, 1));
 }
 /**
- * print_int - Imprime un entier signé (%d ou %i)
- * @args: Liste d'arguments
- * Return: Nombre de caractères imprimés
+ * print_int - Prints a signed integer (for %d or %i)
+ * @args: Variadic arguments with integer to print
+ * Return: Character count printed; manages positive, negative, and INT_MIN
  */
 int print_int(va_list args)
 {
