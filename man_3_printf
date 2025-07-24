@@ -22,6 +22,12 @@ Prints a signed decimal integer.
 .TP
 .B %%
 Prints a literal percent sign.
+.TP
+.B %b
+Prints a binary number.
+.TP
+.B %o
+Prints an octal number.
 .SH RETURN VALUE
 Returns the number of characters printed (excluding the null terminator).
 In case of error (e.g., a NULL), the function returns -1.
