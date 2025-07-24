@@ -5,11 +5,10 @@
 #include <limits.h>
 
 /**
- * struct format_specifier - define a struct for format specifier
- * @spec : characters specifier
- * @f : pointer function
+ * struct format_specifier - Maps a format specifier to its handling function
+ * @spec : The character for the format specifier ('c', 's', '%', ...)
+ * @f : Pointer to the function that handles printing for this specifier
  *
- * Return : void
  */
 
 typedef struct format_specifier
