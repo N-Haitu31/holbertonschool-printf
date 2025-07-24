@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
     va_list args;
     spec_t specs[] = {
         {'c', print_char}, {'s', print_str}, {'%', print_percent}, {'d', print_int},
-        {'i', print_int}, {'\0', NULL},
+        {'i', print_int}, {'b', print_bin}, {'\0', NULL},
     };
     va_start(args, format);
     if ((format == NULL || format[i] == '%') && format[i + 1] == '\0')

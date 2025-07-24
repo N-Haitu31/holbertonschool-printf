@@ -72,3 +72,38 @@ int print_int(va_list args)
 	}
 	return (count);
 }
+
+/**
+ * print_bin - Prints a signed binary (for %b)
+ * @args: Variadic arguments with integer to print
+ * Return: Character count printed binay
+ */
+int print_bin(va_list args)
+
+{
+	long int n = va_arg(args, int);
+	char buffer[12];
+	int i = 0, count = 0;
+
+	if (n < 0)
+	{
+		count += write(1, "-", 1);
+		n = -n;
+	}
+	if (n == 0)
+		buffer[i++] = '0';
+	else
+	{
+		while (n > 0)
+		{
+			buffer[i++] = (n % 2) + '0';
+			n /= 2;
+		}
+	}
+	while (i > 0)
+	{
+		i--;
+		count += write(1, &buffer[i], 1);
+	}
+	return (count);
+}
