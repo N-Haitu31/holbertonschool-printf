@@ -81,8 +81,8 @@ int print_int(va_list args)
 int print_bin(va_list args)
 
 {
-	long int n = va_arg(args, int);
-	char buffer[12];
+	unsigned int n = va_arg(args, unsigned int);
+	char buffer[33];
 	int i = 0, count = 0;
 
 	if (n == 0)
