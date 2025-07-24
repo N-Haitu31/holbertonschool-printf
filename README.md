@@ -37,5 +37,5 @@ A copy of the printf function in C
 ## 🤝 Team
 
 Malik Bouanani  🚀
-  
+
 Haitu Nguyen 💅

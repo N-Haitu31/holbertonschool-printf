@@ -24,7 +24,7 @@ Prints a signed decimal integer.
 Prints a literal percent sign.
 .SH RETURN VALUE
 Returns the number of characters printed (excluding the null terminator).
-In case of error (e.g., a NULL), the function returns -1. 
+In case of error (e.g., a NULL), the function returns -1.
 .SS Limitations
 This implementation does not handle:
 . in +4
