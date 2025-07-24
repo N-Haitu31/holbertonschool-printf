@@ -85,11 +85,6 @@ int print_bin(va_list args)
 	char buffer[12];
 	int i = 0, count = 0;
 
-	if (n < 0)
-	{
-		count += write(1, "-", 1);
-		n = -n;
-	}
 	if (n == 0)
 		buffer[i++] = '0';
 	else
