@@ -76,7 +76,7 @@ int print_int(va_list args)
 /**
  * print_bin - Prints a signed binary (for %b)
  * @args: Variadic arguments with integer to print
- * Return: Character count printed binay
+ * Return: Character count printed binary
  */
 int print_bin(va_list args)
 
