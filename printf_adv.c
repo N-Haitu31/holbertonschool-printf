@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_oct - Prints a signed octal (for %o)
- * @args: Variadic arguments with integer to print
- * Return: Character count printed octal
+ * print_oct - Prints an integer in octal format ('%o')
+ * @args: The unsigned integer to convert and print
+ * Return: The number of octal characters printed
  */
 int print_oct(va_list args)
 

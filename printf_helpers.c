@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_char - Prints a single character
- * @args: Variadic arguments with character to print
- * Return: The number of characters printed (always 1)
+ * print_char - Prints a single character ('%c')
+ * @args: Contains the character to be printed (via variadic arguments)
+ * Return: Always 1, because only one character is printed
  */
 int print_char(va_list args)
 {
@@ -11,9 +11,9 @@ int print_char(va_list args)
 	return (write(1, &c, 1));
 }
 /**
- * print_str - Prints a character string
- * @args: Variadic argument list containing a pointer to the string to print
- * Return: Number of characters printed, handling NULL as (null)
+ * print_str - Prints a string of characters ('%s')
+ * @args: The string to be printed
+ * Return: The number of characters printed, handling NULL as "(null)"
  */
 int print_str(va_list args)
 {
@@ -27,9 +27,9 @@ int print_str(va_list args)
 	return (write(1, str, len));
 }
 /**
- * print_percent - Prints a literal percentage character ('%')
- * @args: Variadic argument list (unused)
- * Return: The number of characters printed (always 1)
+ * print_percent - Prints the '%' character
+ * @args: Not used by this function
+ * Return: Always 1, because only one character is printed
  */
 int print_percent(va_list args)
 {
@@ -38,9 +38,9 @@ int print_percent(va_list args)
 	return (write(1, &c, 1));
 }
 /**
- * print_int - Prints a signed integer (for %d or %i)
- * @args: Variadic arguments with integer to print
- * Return: Character count printed; manages positive, negative, and INT_MIN
+ * print_int - Prints a signed integer ('%d' or '%i')
+ * @args: The integer to print
+ * Return: The number of character printed
  */
 int print_int(va_list args)
 {
@@ -74,9 +74,9 @@ int print_int(va_list args)
 }
 
 /**
- * print_bin - Prints a signed binary (for %b)
- * @args: Variadic arguments with integer to print
- * Return: Character count printed binary
+ * print_bin - Converts and prints an integer in binary format ('%b')
+ * @args: The integer argument
+ * Return: The count of binary characters printed
  */
 int print_bin(va_list args)
 
